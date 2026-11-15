@@ -1,0 +1,61 @@
+GIT COMMANDS USED IN THIS ASSIGNMENT
+====================================
+
+git init
+    Creates a new, empty Git repository (.git folder) in the current project folder.
+
+git branch -M main
+    Renames the current default branch to "main".
+
+git add .
+    Stages all new and modified files so they are included in the next commit.
+
+git add <file>
+    Stages only the named file (e.g. git add index.html).
+
+git commit -m "message"
+    Records the staged changes as a new commit with a descriptive message.
+
+git commit -am "message"
+    Stages all modified tracked files and commits them in a single step.
+
+git status
+    Shows which files are staged, modified or untracked (ignored files are not listed).
+
+git status --ignored
+    Also lists the files Git is ignoring because of .gitignore.
+
+git branch feature
+    Creates a new branch named "feature" pointing at the current commit.
+
+git checkout feature
+    Switches the working directory to the "feature" branch.
+
+git checkout main
+    Switches back to the "main" branch.
+
+git merge feature --no-ff -m "message"
+    Merges the feature branch into the current branch, always creating a merge commit
+    so the branch activity stays visible in the history.
+
+git log --oneline
+    Shows the commit history, one short line per commit.
+
+git log --oneline --graph --all
+    Shows the history of all branches as a text graph, including branch and merge points.
+
+git revert HEAD --no-edit
+    Undoes the last commit by creating a new commit that reverses its changes;
+    the original commit stays in history (safe for shared/pushed repositories).
+
+git remote add origin <repository-url>
+    Connects the local repository to the remote GitHub repository under the name "origin".
+
+git remote -v
+    Lists the configured remote repositories and their URLs.
+
+git push -u origin main
+    Uploads the main branch to GitHub and sets origin/main as its upstream.
+
+git push origin feature
+    Uploads the feature branch to GitHub so the branch is also visible online.
